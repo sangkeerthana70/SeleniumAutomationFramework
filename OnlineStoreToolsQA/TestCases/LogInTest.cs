@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OnlineStoreToolsQA.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -11,13 +12,14 @@ namespace OnlineStoreToolsQA.TestCases
 {
     class LogInTest
     {
+        /*
         [Test]
         public void Test()
         {
+            /*
             IWebDriver driver = new ChromeDriver();
             driver.Url = "http://www.store.demoqa.com";
-
-            /*
+            
             // Find the element that's ID attribute is 'account'(My Account) 
             driver.FindElement(By.XPath(".//*[@id='account']/a")).Click();
 
@@ -37,10 +39,32 @@ namespace OnlineStoreToolsQA.TestCases
 
             // Close the driver
             driver.Quit();
-            */
+        }
+        */
+        
+           
 
+        [SetUp]
+        public void Initialize()
+        {
+            PropertiesCollection.driver = new ChromeDriver();
 
+            PropertiesCollection.driver.Navigate().GoToUrl("http://www.store.demoqa.com");
 
+            PropertiesCollection.driver.Manage().Window.Maximize();
+
+            Console.WriteLine("Opened URL and clicked Home Page");
+        }
+
+        [Test]
+        public void Test()
+        {
+
+            HomePage accountPage = new HomePage();
+
+            LoginPage loginAccount = accountPage.ClickMyAccout(accountTab);
         }
     }
+        
+    
 }

@@ -10,7 +10,14 @@ namespace OnlineStoreToolsQA.PageObjects
 {
     public class LoginPage
     {
-        private IWebDriver driver;
+
+        [Obsolete("Use newMethod instead", false)]
+        public LoginPage()
+        {
+            PageFactory.InitElements(PropertiesCollection.driver, this);
+        }
+
+        //private IWebDriver driver;
 
         [FindsBy(How = How.Id, Using = "log")]
         public IWebElement Username { get; set; }

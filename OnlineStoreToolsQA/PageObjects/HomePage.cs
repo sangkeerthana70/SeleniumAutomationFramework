@@ -10,8 +10,21 @@ namespace OnlineStoreToolsQA.PageObjects
 {
     class HomePage
     {
-        private IWebDriver driver;
+        [Obsolete("Use newMethod instead", false)]
+        public HomePage()
+        {
+            PageFactory.InitElements(PropertiesCollection.driver, this);
+        }
+
+        //private IWebDriver driver;
+
         [FindsBy(How = How.Id, Using = "account")]
         public IWebElement MyAccount { get; set; }
+
+        //method to click MyAccount tab
+        public void ClickMyAccout(IWebElement accountTab)
+        {
+            MyAccount.Click();
+        }
     }
 }

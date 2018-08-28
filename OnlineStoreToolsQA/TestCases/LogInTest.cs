@@ -17,6 +17,7 @@ namespace OnlineStoreToolsQA.TestCases
             IWebDriver driver = new ChromeDriver();
             driver.Url = "http://www.store.demoqa.com";
 
+            /*
             // Find the element that's ID attribute is 'account'(My Account) 
             driver.FindElement(By.XPath(".//*[@id='account']/a")).Click();
 
@@ -36,6 +37,8 @@ namespace OnlineStoreToolsQA.TestCases
 
             // Close the driver
             driver.Quit();
+            */
+
 
 
         }

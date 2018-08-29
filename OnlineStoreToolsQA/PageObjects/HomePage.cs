@@ -22,9 +22,10 @@ namespace OnlineStoreToolsQA.PageObjects
         public IWebElement MyAccount { get; set; }
 
         //method to click MyAccount tab
-        public void ClickMyAccout(IWebElement accountTab)
+        public LoginPage ClickMyAccout()
         {
             MyAccount.Click();
+            return new LoginPage();
         }
     }
 }

@@ -62,7 +62,9 @@ namespace OnlineStoreToolsQA.TestCases
 
             HomePage accountPage = new HomePage();
 
-            LoginPage loginAccount = accountPage.ClickMyAccout(accountTab);
+            LoginPage loginAccount = accountPage.ClickMyAccout();
+
+            Console.WriteLine("Successfully launched Home page and returned Login Page");
         }
     }
         

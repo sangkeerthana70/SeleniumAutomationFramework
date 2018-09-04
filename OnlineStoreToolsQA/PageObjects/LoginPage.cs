@@ -25,7 +25,15 @@ namespace OnlineStoreToolsQA.PageObjects
         [FindsBy(How = How.Id, Using = "pwd")]
         public IWebElement Password { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "submit")]
+        [FindsBy(How = How.Id, Using = "login")]
         public IWebElement Login { get; set; }
+
+        public void SignIn(string userName, string password)
+        {
+            Username.SendKeys(userName);
+            Password.SendKeys(password);
+            Login.Click();
+
+        }
     }
 }

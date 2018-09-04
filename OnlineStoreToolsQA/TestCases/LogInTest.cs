@@ -64,6 +64,8 @@ namespace OnlineStoreToolsQA.TestCases
 
             LoginPage loginAccount = accountPage.ClickMyAccout();
 
+            loginAccount.SignIn("anu", "@nuK1978");
+
             Console.WriteLine("Successfully launched Home page and returned Login Page");
         }
     }
